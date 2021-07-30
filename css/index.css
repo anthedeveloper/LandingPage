@@ -1,0 +1,151 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /* width and height include the padding space */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* position to center*/
+}
+
+main {
+    background-color: black;
+    min-height: 100vh;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+}
+.main_background {
+    position: absolute;
+    top:0;
+    right:-10%;
+}
+
+.content_container {
+    position: relative;
+    top: 0;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+.nav_list {
+    display: flex;
+    justify-content: flex-end; /* align end */
+    margin: 0;
+    padding: 1em 0; /* does not effect other elements */
+    list-style: none;
+}
+.nav_list li {
+    margin: 0 1em;
+}
+
+.nav_list li a {
+    display: block; /*  */
+    padding: 1em 0;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.nav_list li a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00FF9A ;
+    transition: 0.3s;
+}
+
+.nav_list li a:hover:after {
+    width: 50%;
+}
+
+main .content {
+    color: white;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+main .content h2 {
+    font-weight: 300;
+}
+
+main .content h1 {
+    font-size: 3em;
+}
+
+.html_css {
+    margin: 3em 0 ;
+}
+
+.html,
+.css{
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.css {
+    flex-direction: row-reverse;
+}
+.html .tile,
+.html .content,
+.css .tile,
+.css .content {
+    width: 50%;
+}
+
+.html .tile,
+.css .tile {
+    background: url("../img/code-bg.png");
+    padding-top: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.html .tile h2,
+.css .tile h2{
+    color: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8);
+    font-size: 3em;
+    margin: 0;
+}
+
+.html .content,
+.css .content {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.html .content h2{
+    color: #00FF9A;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.css .content h2{
+    color: deeppink;
+    font-size: 2em;
+}
+.html .content p,
+.css .content p{
+    font-weight: 300;
+    margin-bottom: 2em;
+}
